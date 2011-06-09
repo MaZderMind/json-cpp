@@ -23,7 +23,7 @@ build-stamp: configure-stamp
 	dh_testdir
 
 	# Add here commands to compile the package.
-	$(MAKE) -C makefiles/gcc
+	$(MAKE) -f makefiles/gcc/Makefile
 
 	touch $@
 
@@ -33,7 +33,7 @@ clean:
 	rm -f build-stamp configure-stamp
 
 	# Add here commands to clean up after the build process.
-	$(MAKE) -C makefiles/gcc clean || /bin/true
+	$(MAKE) -f makefiles/gcc/Makefile clean || /bin/true
 
 	dh_clean 
 
@@ -44,7 +44,7 @@ install: build
 	dh_installdirs
 
 	# Add here commands to install the package into debian/libjsoncpp
-	$(MAKE) -C makefiles/gcc DESTDIR=$(CURDIR)/debian/libjsoncpp install
+	$(MAKE) -f makefiles/gcc/Makefile DESTDIR=$(CURDIR)/debian/libjsoncpp install
 
 
 # Build architecture-independent files here.

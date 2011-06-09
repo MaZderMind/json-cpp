@@ -7,7 +7,7 @@ CC = g++
 LD = g++
 
 # binaries and folders
-#VERSION = `cat ../../version`
+#VERSION = `cat version`
 VERSION = 0.6
 LIBDIR = lib
 LIBNAME = libjsoncpp-$(VERSION).so
@@ -59,10 +59,12 @@ install:
 	install -m 644 -g root -o root -s $(LIB) $(DESTDIR)/usr/lib
 	
 	install -m 755 -g root -o root -d $(DESTDIR)/usr/include/json
-	install -m 644 -g root -o root ../../include/json/json.h $(DESTDIR)/usr/include/json
-	install -m 644 -g root -o root ../../include/json/autolink.h $(DESTDIR)/usr/include/json
-	install -m 644 -g root -o root ../../include/json/value.h $(DESTDIR)/usr/include/json
-	install -m 644 -g root -o root ../../include/json/reader.h $(DESTDIR)/usr/include/json
-	install -m 644 -g root -o root ../../include/json/writer.h $(DESTDIR)/usr/include/json
-	install -m 644 -g root -o root ../../include/json/features.h $(DESTDIR)/usr/include/json
+	install -m 644 -g root -o root include/json/json.h $(DESTDIR)/usr/include/json
+	install -m 644 -g root -o root include/json/autolink.h $(DESTDIR)/usr/include/json
+	install -m 644 -g root -o root include/json/value.h $(DESTDIR)/usr/include/json
+	install -m 644 -g root -o root include/json/reader.h $(DESTDIR)/usr/include/json
+	install -m 644 -g root -o root include/json/writer.h $(DESTDIR)/usr/include/json
+	install -m 644 -g root -o root include/json/features.h $(DESTDIR)/usr/include/json
+	install -m 644 -g root -o root include/json/config.h $(DESTDIR)/usr/include/json
+	install -m 644 -g root -o root include/json/forwards.h $(DESTDIR)/usr/include/json
 
