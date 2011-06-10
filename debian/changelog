@@ -1,4 +1,4 @@
-libjsoncpp (0.6.0) natty; urgency=low
+libjsoncpp (0.6.0) maverick; urgency=low
 
   * Initial debian package
 
